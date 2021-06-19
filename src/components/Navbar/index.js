@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {IconContext} from 'react-icons/lib';
-import {animateScroll as scroll} from 'react-scroll';
 import {
     Nav,
     NavbarContainer,
@@ -9,13 +8,14 @@ import {
     NavLinks,
     NavBtn,
     NavBtnLink,
-    NavItem
+    NavItem,
+    NavBtnLinkSignUp
+
 } from './NavbarElements';
 
-const Navbar = ({toggle}) => {
+const Navbar = () => {
     
     const [scrollNav, setScrollNav] = useState(false)
-
 
     const changeNav = () => {
 
@@ -33,43 +33,32 @@ const Navbar = ({toggle}) => {
         window.addEventListener('scroll', changeNav)
     }, [])
 
-    const toggleHome = () => {
-        scroll.scrollToTop()
-    }
 
         return (
             <>
-            <IconContext.Provider value={{ color: '#fff' }}>
+            <IconContext.Provider value={{ color: '#000' }}>
                 <Nav scrollNav={scrollNav}>
                     <NavbarContainer>
-                        <Navlogo to ="/" onClick={toggleHome}>  <i className="fas fa-dog"/></Navlogo>
+                        <Navlogo to ="/" >  <i className="fas fa-dog"/></Navlogo> 
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to="/page1"
-                                        duration={500}
-                                        exact='true'
-                                        offset={-80}
-                                >
-                                    Galeria
+                                <NavLinks to="/page1">
+                                    Images
                                 </NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="/page2"
-                                        duration={500}
-                                        exact='true'
-                                        offset={-80}
-                                >
-                                    Sobre
+                                <NavLinks to="/page2">
+                                    Videos
                                 </NavLinks>
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                           <NavBtnLink to="/register">Register</NavBtnLink>
-                        </NavBtn>
-                        <NavBtn>
                            <NavBtnLink to="/signin">Sign In</NavBtnLink>
                         </NavBtn>
                     </NavbarContainer>
+                        <NavBtn>
+                            <NavBtnLinkSignUp to="/register">Sign Up</NavBtnLinkSignUp>
+                        </NavBtn>
                 </Nav>
             </IconContext.Provider>
             </>

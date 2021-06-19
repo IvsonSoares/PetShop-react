@@ -1,4 +1,6 @@
 import React from 'react';
+import Modal from '../../components/Navbar/modal';
+
 import img1 from './marketImages/img1.png';
 import img2 from './marketImages/img2.png';
 import img3 from './marketImages/img3.png';
@@ -32,7 +34,7 @@ const Market = () => {
                 <MarketH1>Market Place</MarketH1>
                 <MarketWrapper>
                     <MarketCard>
-                        <MarketIconLink href="https://www.youtube.com/watch?v=EtrodNQKZ8I">
+                        <MarketIconLink href="/modal">
                             <MarketIcon src={img1} />
                             <MarketH2>Estou a venda</MarketH2>
                             <MarketP>R$ 00.00</MarketP>
@@ -171,8 +173,8 @@ const Market = () => {
                             <MarketP>R$ 00.00</MarketP>
                         </MarketIconLink>
                     </MarketCard>
+                   <Icon to="/">Voltar</Icon> 
                 </MarketWrapper>
-                <Icon to="/">Voltar</Icon>
             </MarketContainer>
             
         </>

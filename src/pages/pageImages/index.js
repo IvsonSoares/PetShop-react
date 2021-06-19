@@ -16,7 +16,6 @@ const PageImages= () => {
                 <PageImagesContainer>
                     <PageColumns>
                         <PageImagesLayout src="https://www.ufpr.br/portalufpr/wp-content/uploads/2020/10/destaque_pets.jpg"/>
-                    
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://paginanews.com.br/wp-content/uploads/2021/04/cachorro-e-gato.jpg"/>
@@ -40,7 +39,7 @@ const PageImages= () => {
                         <PageImagesLayout src="https://images-na.ssl-images-amazon.com/images/I/61XQ4CsW9uL._AC_SX466_.jpg"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src="http://25.media.tumblr.com/tumblr_mavdssgVQA1rol4hto1_500.jpg"/>
+                        <PageImagesLayout src=""/>
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://i.insider.com/5d9249552e22af25bd001946?width=700"/>
@@ -64,7 +63,7 @@ const PageImages= () => {
                         <PageImagesLayout src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxPWKVbWQi8Sks1N4nvb3ei66FPmgkczsgA&usqp=CAU"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src="https://i.pinimg.com/originals/eb/8c/e4/eb8ce4cb123ad74f1d16f2f14cf752b5.jpg"/>
+                        <PageImagesLayout src=""/>
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://theculturetrip.com/wp-content/uploads/2018/02/40326275012_a4348e6e60_k.jpg"/>
@@ -79,7 +78,7 @@ const PageImages= () => {
                         <PageImagesLayout src="https://previews.123rf.com/images/vwalakte/vwalakte1510/vwalakte151000016/47119706-vertical-portrait-of-brown-cow-in-normandy-france-.jpg"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src="https://i.pinimg.com/originals/4c/fb/2e/4cfb2e5adcec68523be7b600e753b527.jpg"/>
+                        <PageImagesLayout src=""/>
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://thumbs.dreamstime.com/b/peixes-coloridos-tropicais-nadando-em-aqu%C3%A1rio-com-plantas-dourados-carassius-auratus-cativeiro-no-vertical-foto-161500552.jpg"/>
@@ -100,7 +99,7 @@ const PageImages= () => {
                         <PageImagesLayout src="https://thumbs.dreamstime.com/b/dog-adopt-rescue-animal-vertical-dog-advertising-s-adoption-wearing-adopt-me-bandana-210040312.jpg"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src="https://i.pinimg.com/736x/26/1a/45/261a45c754d06aa4387bca036a1e5e5c.jpg"/>
+                        <PageImagesLayout src=""/>
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://i.insider.com/5f527991e6ff30001d4e72f9?width=1200&format=jpeg"/>
@@ -109,7 +108,7 @@ const PageImages= () => {
                         <PageImagesLayout src="https://www.pethealthnetwork.com/sites/default/files/styles/large/public/article-image-vertical_1_4.jpg?itok=n6X44TXy"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src="https://i.pinimg.com/originals/ac/75/25/ac7525c223cbf35137259644d7331fc1.jpg"/>
+                        <PageImagesLayout src=""/>
                     </PageColumns>
                 </PageImagesContainer>
                 </PageContainer>

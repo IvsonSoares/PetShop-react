@@ -29,7 +29,6 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
 `;
 
 export const Navlogo = styled(Link)`
@@ -41,7 +40,6 @@ export const Navlogo = styled(Link)`
   display: flex;
   align-items: center;
   margin-left: 24px;
-  font-weight: bold;
   text-decoration: none;
 
 
@@ -89,11 +87,6 @@ export const NavBtn = styled.nav`
 
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: 760px) {
-
-    display: none;
-  }
 `;
 
 export const NavBtnLink = styled(Link)`
@@ -114,5 +107,27 @@ export const NavBtnLink = styled(Link)`
       transition: 0.2s all ease-in-out;
       background: #000;
       color: #fff;
+  }
+`;
+
+export const NavBtnLinkSignUp = styled(Link)`
+
+  border-radius: 5px;
+  margin-right: 20px;
+  background: #002;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+      transition: 0.2s all ease-in-out;
+      background: #fff;
+      color: #002;
   }
 `;

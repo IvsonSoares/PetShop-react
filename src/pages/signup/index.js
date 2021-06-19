@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import { userSchema } from '../../components/Navbar/Validation/registerValidation';
 import Navbar from '../../components/Navbar';
 import { RegisterPageContainer,
          ResgisterPageWrap,
@@ -7,22 +8,19 @@ import { RegisterPageContainer,
          RegisterFormH1,
          RegisterFormLabel,
          RegisterFormInput,
-         RegisterSubmit
+         RegisterSubmit,
+         RegistrationConfirmed
 
-} from './registerElements';
+} from './signupElements';
 
 
 const URL_RESGISTER = "http://localhost/php/registration.php";
 
-const sendData = async (url, data) => {
+const sendData  =  async (url, data) => {
     
     const answer = await fetch ( url, {
             method: 'POST',
             body: JSON.stringify(data),
-            headers: {
-                'Content-type': 'application/json'
-            }
-            
         });
         const json = await answer.json();
         return json;
@@ -32,8 +30,8 @@ const sendData = async (url, data) => {
 
 export default function RegisterPage() {
 
-    const [wait, setWait] = useState(false);
     const[registered, setRegistered] = useState(false);
+    const [wait, setWait] = useState(false)
 
     const userName = useRef(null);
     const userPassword= useRef(null);
@@ -41,12 +39,9 @@ export default function RegisterPage() {
     const userPet= useRef(null);
     const userBreed= useRef(null);
 
-
     const HandleLogin = async() => {
+        setWait(true)
 
-
-        
-        setWait(true);
 
         const data =  {
             "name": userName.current.value,
@@ -57,38 +52,48 @@ export default function RegisterPage() {
 
         };
 
-        const answerJson = await sendData(URL_RESGISTER, data);
-        console.log(answerJson)
-        
-        //  if (answerJson.result === "ok") {
-        //      setRegistered(true)
-        
-        // };
-        
-        // answerJson.result.value ? setRegistered(true) : setRegistered(false)
+        const isValid = await userSchema.isValid(data);
 
-        setWait(false);
+
+        if (isValid === true){
+
+            const answerJson = await sendData(URL_RESGISTER, data);
+
+            if (answerJson.result === 'email_already_present') {
+                alert('Usuario Ja cadastrado!')
+            } else if (answerJson.result === 'true') {
+                setRegistered(true)
+            }
+        } else{
+            alert('Verifique o preenchimento de todos os campos')
+        }
+
+        setWait(false)
+
     };
 
     return (
         <>
         <Navbar/>
         <RegisterPageContainer>
+            
             <ResgisterPageWrap>
                 <RegisterPageContent>
                     <RegisterForm>
                         <RegisterFormH1>Registration</RegisterFormH1>
+                            
                             <RegisterFormLabel >First Name</RegisterFormLabel>
-                                <RegisterFormInput type="text" ref={userName} placeholder="Enter your first name"/>
+                                <RegisterFormInput required type="text" ref={userName} placeholder="Enter your first name"/>
                             <RegisterFormLabel>Password</RegisterFormLabel>
-                                <RegisterFormInput type="password"  ref={userPassword} placeholder="Enter a password" />
+                                <RegisterFormInput required type="password"  ref={userPassword} placeholder="Enter a password" />
                             <RegisterFormLabel>Email</RegisterFormLabel>
-                                <RegisterFormInput type="text" ref={userEmail} placeholder="Enter your email"/>
+                                <RegisterFormInput required type="text" ref={userEmail} placeholder="Enter your email"/>
                             <RegisterFormLabel>Pet</RegisterFormLabel>
-                                <RegisterFormInput type="text" ref={userPet} placeholder="Enter which is your pet"/>
+                                <RegisterFormInput required type="text" ref={userPet} placeholder="Enter which is your pet"/>
                             <RegisterFormLabel>Raca</RegisterFormLabel>
-                                <RegisterFormInput type="text" ref={userBreed} placeholder="Enter its breed"/>
-                        <RegisterSubmit hidden={registered} disabled={wait} onClick={HandleLogin}  >Submit</RegisterSubmit>
+                                <RegisterFormInput required type="text" ref={userBreed} placeholder="Enter its breed"/>
+                        <RegisterSubmit registered={registered} disabled={wait} onClick={HandleLogin}>Submit</RegisterSubmit>
+                        <RegistrationConfirmed registered={registered} >Registered!</RegistrationConfirmed>
                     </RegisterForm>
                 </RegisterPageContent>
             </ResgisterPageWrap>

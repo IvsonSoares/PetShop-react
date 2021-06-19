@@ -81,6 +81,7 @@ export const RegisterFormInput = styled.input`
 
 export const RegisterSubmit = styled.button`
     background: #2f9cb5;
+    
     padding: 10px 0;
     border: none;
     border-radius: 4px;
@@ -88,8 +89,18 @@ export const RegisterSubmit = styled.button`
     font-size: 20px;
     cursor: pointer;
     font-weight: bold;
+    visibility: ${({ registered }) => (registered ? "hidden" : "initial")};
 
     &:hover {
         background-color: #0255db;
     }
 `;
+
+export const RegistrationConfirmed = styled.p`
+    padding: 0 120px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    visibility: ${({ registered }) => (registered ? "initial" : "hidden")};
+`;
+

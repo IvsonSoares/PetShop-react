@@ -12,20 +12,19 @@ export const PageImagesContainer = styled.div`
     padding: 0 30px;
     height: auto;
     max-width: 100wv;
-
     column-count: 4;
     z-index: 1;
 
    @media screen and (max-width: 760px) {
         column-count: 3;
    }
+
 `;
 
 export const PageColumns = styled.div`
 
     height: auto;
     break-inside: avoid-column;
-    border-radius: 5px;
     margin-bottom: 10px;
     overflow: hidden;
 `;

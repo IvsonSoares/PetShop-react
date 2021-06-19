@@ -24,16 +24,13 @@ const answer = await fetch ( url, {
         headers: {
             'Content-type': 'application/json'
         }
-    
     });
     const json = await answer.json();
     return json;
 }
 
 
-
-
-export default function SignIn(props) {
+export default function SignIn() {
     let history = useHistory();
     const [wait, setWait] = useState(false);
     const [alert, setAlert] = useState(true);
@@ -51,10 +48,9 @@ export default function SignIn(props) {
             "password": userPassword.current.value
         };
         const answerJson = await sendData(URL_LOGIN, data);
-        console.log(answerJson.connected);
         
         const AbletoConnect = () =>{
-            history.push('/page3');
+            history.push('/$2y$10$9X8pPTBkA4Ss6E1SH3GEMOt5Z98WtLD27aMn8CNw1rK');
         }
 
         answerJson.connected ? AbletoConnect() : setAlert(false);
@@ -71,11 +67,11 @@ export default function SignIn(props) {
                             <Form >
                                 <FormH1>Sign In</FormH1>
                                 <FormLabel >🐾  First Name</FormLabel>
-                                <FormInput type="text" ref={userName} required placeholder="First name"/>
+                                <FormInput type="text" ref={userName} placeholder="First name"/>
                                 <FormLabel >🔐 Password</FormLabel>
-                                <FormInput type="password" ref={userPassword} required placeholder="Password"/>
+                                <FormInput type="password" ref={userPassword} placeholder="Password"/>
                                 <FormButton type="submit" onClick={HandleLogin} disabled={wait} >Submit</FormButton>
-                                <Alert hidden={alert}  >entrada invalida</Alert>
+                                <Alert hidden={alert}  >invalid input</Alert>
                             </Form>
                         </FormContent>
                     </FormWrap>
