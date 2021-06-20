@@ -66,7 +66,7 @@ export default function SignIn() {
                         <FormContent>
                             <Form >
                                 <FormH1>Sign In</FormH1>
-                                <FormLabel >🐾  First Name</FormLabel>
+                                <FormLabel >📋  First Name</FormLabel>
                                 <FormInput type="text" ref={userName} placeholder="First name"/>
                                 <FormLabel >🔐 Password</FormLabel>
                                 <FormInput type="password" ref={userPassword} placeholder="Password"/>

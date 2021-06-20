@@ -20,7 +20,7 @@ const [selectedVideo, setSelectedVideo] = useState("https://assets.mixkit.co/vid
                 <PageContainer>
                 <Navbar/>
                 <MainVideoContainer>
-                <MainVideoLayout autoPlay src={selectedVideo}/>
+                <MainVideoLayout autoPlay loop src={selectedVideo}/>
                 </MainVideoContainer>
                 <PageVideosContainer>
 

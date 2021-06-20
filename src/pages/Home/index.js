@@ -17,11 +17,11 @@ const Home = () => {
                 <HomeText>
                     <Typewriter 
                         onInit= {( typewriter ) => {    
-                        typewriter.typeString("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat ac tincidunt vitae semper quis lectus nulla at. Scelerisque fermentum dui faucibus in ornare quam viverra orci."); //.start()
+                        typewriter.typeString("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat ac tincidunt vitae semper quis lectus nulla at. Scelerisque fermentum dui faucibus in ornare quam viverra orci.").start(); 
                     }}/>
                 </HomeText>   
                 <HomeContainer>
-                    <HomeVideoBg muted src={backgroundVideo} type='video/mp4'/>
+                    <HomeVideoBg autoPlay loop muted src={backgroundVideo} type='video/mp4'/>
                 </HomeContainer>
                 
             </>

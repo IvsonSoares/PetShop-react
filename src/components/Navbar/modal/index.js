@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import { BsX } from 'react-icons/bs';
+import React, { Component } from 'react';
 
-import {ModalBg,
+
+import {BuyBtn, ModalBg,
         ModalBtnClose,
         ModalContainer,
         ModalH1,
@@ -11,24 +11,21 @@ import {ModalBg,
 
 } from './modalElements'
 
-const  Modal = () => {
+export default class Modal extends Component {
 
-
-
+render() {
 
     return (
-        <>
-            <ModalBg>
-                 <ModalBtnClose><BsX/></ModalBtnClose>
+             <ModalBg >
                 <ModalContainer>
-                   
-                    <ModalH1>Hello</ModalH1>
-                    <ModalImg></ModalImg>
-                    <ModalP>Hello</ModalP>
+                    <ModalH1>{this.props.title}</ModalH1>
+                    <ModalImg src={this.props.image}/>
+                    <ModalP>{this.props.preco}</ModalP>
+                    <BuyBtn>Buy</BuyBtn>
+                    <ModalBtnClose onClick={this.props.hide}>Close</ModalBtnClose>
                 </ModalContainer>
-            </ModalBg>
-        </>
+            </ModalBg> 
     )
-}
 
-export default Modal
+ }
+}

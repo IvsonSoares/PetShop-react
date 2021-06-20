@@ -82,15 +82,15 @@ export default function RegisterPage() {
                     <RegisterForm>
                         <RegisterFormH1>Registration</RegisterFormH1>
                             
-                            <RegisterFormLabel >First Name</RegisterFormLabel>
+                            <RegisterFormLabel >📋First Name</RegisterFormLabel>
                                 <RegisterFormInput required type="text" ref={userName} placeholder="Enter your first name"/>
-                            <RegisterFormLabel>Password</RegisterFormLabel>
+                            <RegisterFormLabel>🔐Password</RegisterFormLabel>
                                 <RegisterFormInput required type="password"  ref={userPassword} placeholder="Enter a password" />
-                            <RegisterFormLabel>Email</RegisterFormLabel>
+                            <RegisterFormLabel>📧Email</RegisterFormLabel>
                                 <RegisterFormInput required type="text" ref={userEmail} placeholder="Enter your email"/>
-                            <RegisterFormLabel>Pet</RegisterFormLabel>
+                            <RegisterFormLabel>🐾Pet</RegisterFormLabel>
                                 <RegisterFormInput required type="text" ref={userPet} placeholder="Enter which is your pet"/>
-                            <RegisterFormLabel>Raca</RegisterFormLabel>
+                            <RegisterFormLabel>🐶Raca</RegisterFormLabel>
                                 <RegisterFormInput required type="text" ref={userBreed} placeholder="Enter its breed"/>
                         <RegisterSubmit registered={registered} disabled={wait} onClick={HandleLogin}>Submit</RegisterSubmit>
                         <RegistrationConfirmed registered={registered} >Registered!</RegistrationConfirmed>
