@@ -39,9 +39,6 @@ const PageImages= () => {
                         <PageImagesLayout src="https://images-na.ssl-images-amazon.com/images/I/61XQ4CsW9uL._AC_SX466_.jpg"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src=""/>
-                    </PageColumns>
-                    <PageColumns>
                         <PageImagesLayout src="https://i.insider.com/5d9249552e22af25bd001946?width=700"/>
                     </PageColumns>
                     <PageColumns>
@@ -63,9 +60,6 @@ const PageImages= () => {
                         <PageImagesLayout src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxPWKVbWQi8Sks1N4nvb3ei66FPmgkczsgA&usqp=CAU"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src=""/>
-                    </PageColumns>
-                    <PageColumns>
                         <PageImagesLayout src="https://theculturetrip.com/wp-content/uploads/2018/02/40326275012_a4348e6e60_k.jpg"/>
                     </PageColumns>
                     <PageColumns>
@@ -76,9 +70,6 @@ const PageImages= () => {
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://previews.123rf.com/images/vwalakte/vwalakte1510/vwalakte151000016/47119706-vertical-portrait-of-brown-cow-in-normandy-france-.jpg"/>
-                    </PageColumns>
-                    <PageColumns>
-                        <PageImagesLayout src=""/>
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://thumbs.dreamstime.com/b/peixes-coloridos-tropicais-nadando-em-aqu%C3%A1rio-com-plantas-dourados-carassius-auratus-cativeiro-no-vertical-foto-161500552.jpg"/>
@@ -99,16 +90,10 @@ const PageImages= () => {
                         <PageImagesLayout src="https://thumbs.dreamstime.com/b/dog-adopt-rescue-animal-vertical-dog-advertising-s-adoption-wearing-adopt-me-bandana-210040312.jpg"/>
                     </PageColumns>
                     <PageColumns>
-                        <PageImagesLayout src=""/>
-                    </PageColumns>
-                    <PageColumns>
                         <PageImagesLayout src="https://i.insider.com/5f527991e6ff30001d4e72f9?width=1200&format=jpeg"/>
                     </PageColumns>
                     <PageColumns>
                         <PageImagesLayout src="https://www.pethealthnetwork.com/sites/default/files/styles/large/public/article-image-vertical_1_4.jpg?itok=n6X44TXy"/>
-                    </PageColumns>
-                    <PageColumns>
-                        <PageImagesLayout src=""/>
                     </PageColumns>
                 </PageImagesContainer>
                 </PageContainer>

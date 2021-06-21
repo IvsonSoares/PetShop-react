@@ -36,24 +36,17 @@ const [selectedVideo, setSelectedVideo] = useState("https://assets.mixkit.co/vid
                         </MainVideosLink>
                     </PageVideosColumns>
 
-                    
-
                     <PageVideosColumns>
                         <MainVideosLink  >
                         <PageVideosLayout onClick={() => setSelectedVideo("https://assets.mixkit.co/videos/preview/mixkit-white-cat-lying-among-the-grasses-seen-up-close-22732-large.mp4")} src={"https://assets.mixkit.co/videos/preview/mixkit-white-cat-lying-among-the-grasses-seen-up-close-22732-large.mp4"}/>
                         </MainVideosLink>
                     </PageVideosColumns>
 
-                    
-                    
-
                     <PageVideosColumns>
                         <MainVideosLink>
                         <PageVideosLayout onClick={() => setSelectedVideo("https://assets.mixkit.co/videos/preview/mixkit-woman-meditating-with-her-dog-in-the-sunset-4800-large.mp4")}  src={"https://assets.mixkit.co/videos/preview/mixkit-woman-meditating-with-her-dog-in-the-sunset-4800-large.mp4"}/>
                         </MainVideosLink>
                     </PageVideosColumns>
-
-                    
 
                     <PageVideosColumns>
                     <MainVideosLink  >
